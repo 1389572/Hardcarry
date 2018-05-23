@@ -5,24 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.project.safereturn.DetectActivity">
+    tools:context="com.project.safereturn.DetectActivity"
+    android:background="@drawable/bg">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="감지가 시작되었습니다..."/>
+        android:text="감지가 시작되었습니다..."
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="스마트폰을 빠르게 한드시거나 소리를 지르면 등록된 번호로 위치 전송이 됩니다.\n같은 장소에 7분간 지체되어도 위치전송이 됩니다."/>
+        android:text="스마트폰을 빠르게 한드시거나 소리를 지르면 등록된 번호로 위치 전송이 됩니다.\n같은 장소에 7분간 지체되어도 위치전송이 됩니다."
+        android:textColor="@android:color/white"/>
 
-    <ImageView
-        android:id="@+id/imageView_cur_location"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_gravity="center"
-        android:src="@drawable/marker"
-        android:text="현재위치 보기" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView_cur_location"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center"
+            android:src="@drawable/marker"
+            android:text="현재위치 보기"
+            android:layout_marginTop="48dp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/textView_decibel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="데시벨 : "
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageVIew_finish"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:src="@drawable/finish"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="48dp"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
